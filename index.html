@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" >
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Happy Birthday Pilot - Party Mode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Pilot</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
     body {
       margin: 0;
       font-family: 'Times New Roman', serif;
@@ -24,15 +22,12 @@
       font-size: 70px;
       color: #ff69b4;
       text-align: center;
-      user-select: none;
       text-shadow: 0 0 10px #ff69b4;
     }
     #waitingText {
       font-size: 24px;
       color: #ddd;
       margin-top: 10px;
-      text-align: center;
-      user-select: none;
       text-shadow: 0 0 5px #ff69b4;
     }
     #overlay {
@@ -53,10 +48,7 @@
       max-height: 80vh;
       background: linear-gradient(135deg, #ff69b4cc, #cc3399cc);
       border-radius: 20px;
-      box-shadow:
-        0 0 20px #ff66cc,
-        0 0 40px #ff33aa,
-        inset 0 0 20px #ff99cc;
+      box-shadow: 0 0 20px #ff66cc, 0 0 40px #ff33aa, inset 0 0 20px #ff99cc;
       padding: 30px 40px;
       color: white;
       font-size: 28px;
@@ -78,160 +70,14 @@
       width: 150px;
       margin: 20px auto 10px;
       border-radius: 12px;
-      box-shadow:
-        0 0 15px #ff66cc,
-        inset 0 0 10px #ff99cc;
+      box-shadow: 0 0 15px #ff66cc, inset 0 0 10px #ff99cc;
       display: block;
-    }
-    /* Smoky party effect - multiple layered blurred circles */
-    #smokeEffect {
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      pointer-events: none;
-      z-index: 3;
-      overflow: hidden;
-      background: transparent;
-    }
-    .smoke {
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle at center, rgba(255, 182, 193, 0.15), transparent 70%);
-      filter: blur(30px);
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-    }
-    .smoke1 {
-      width: 300px; height: 300px;
-      top: 20%; left: 15%;
-      animation-name: floatSmoke1;
-      animation-duration: 10s;
-    }
-    .smoke2 {
-      width: 350px; height: 350px;
-      top: 60%; left: 60%;
-      animation-name: floatSmoke2;
-      animation-duration: 12s;
-    }
-    .smoke3 {
-      width: 250px; height: 250px;
-      top: 40%; left: 70%;
-      animation-name: floatSmoke3;
-      animation-duration: 15s;
-    }
-    @keyframes floatSmoke1 {
-      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.15; }
-      50% { transform: translate(30px, -30px) scale(1.1); opacity: 0.25; }
-    }
-    @keyframes floatSmoke2 {
-      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.15; }
-      50% { transform: translate(-40px, 40px) scale(1.1); opacity: 0.3; }
-    }
-    @keyframes floatSmoke3 {
-      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.15; }
-      50% { transform: translate(-20px, -20px) scale(1.1); opacity: 0.2; }
-    }
-    /* Sparkles */
-    #sparkleContainer {
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      pointer-events: none;
-      z-index: 4;
-      overflow: hidden;
-    }
-    .sparkle {
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      background: white;
-      border-radius: 50%;
-      box-shadow: 0 0 8px 3px white;
-      opacity: 0.8;
-      animation: twinkle 2s infinite alternate ease-in-out;
-    }
-    @keyframes twinkle {
-      0% {opacity: 0.3;}
-      100% {opacity: 0.9;}
-    }
-    /* Balloon container and balloons */
-    #balloonContainer {
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 5;
-    }
-    .balloon {
-      position: absolute;
-      bottom: -100px;
-      width: 30px;
-      height: 40px;
-      background-color: red;
-      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      opacity: 0.9;
-      animation: floatUp 8s linear forwards;
-      filter: drop-shadow(0 0 3px #fff);
-    }
-    .balloon:after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      width: 2px;
-      height: 20px;
-      background: #555;
-      transform: translateX(-50%);
-    }
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.9;
-      }
-      100% {
-        transform: translateY(-110vh) scale(1.2);
-        opacity: 0;
-      }
-    }
-    /* Music toggle button */
-    #musicToggle {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: #ff66cccc;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 25px;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow:
-        0 0 10px #ff66cc,
-        inset 0 0 5px #ff99cc;
-      z-index: 20;
-      user-select: none;
-      transition: background 0.3s ease;
-    }
-    #musicToggle:hover {
-      background: #ff33aaee;
-    }
-    /* Scrollbar for popup messages with many images */
-    .popup::-webkit-scrollbar {
-      width: 8px;
-    }
-    .popup::-webkit-scrollbar-thumb {
-      background-color: #ff69b4cc;
-      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-
   <div id="countdown">10</div>
-  <div id="waitingText">Waiting for the moment...</div>
-
-  <div id="overlay"></div>
-
-  <!-- Popups for messages -->
-  <div id="popup1" class="popup">
+  <div id="waitingText">Waiting for the moment...</div>  <div id="overlay"></div>  <div id="popup1" class="popup">
     Happy Birthday Pilot!
     <img src="https://i.imgur.com/1Xqz0Tb.png" alt="Birthday Cake" />
   </div>
@@ -246,19 +92,43 @@
       <img src="https://i.imgur.com/photo5.jpg" alt="photo5" />
     </div>
     <p style="margin-top: 15px; font-size: 20px;">
-      Aap puchte the na ki screenshots le kar kya karungi? Yeh dekho... yeh karungi! 😂😂😅😁<br/>
-      I hope aapko acha laga ho. I just tried to make your birthday a little worthy 😅😅😅
+      Aap puchte the na ki screenshots le kar kya karungi? Yeh dekho... yeh karungi! <br/>
+      I hope aapko acha laga ho. I just tried to make your birthday a little worthy.
     </p>
-  </div>
+  </div>  <script>
+    let countdown = 10;
+    const countdownEl = document.getElementById("countdown");
+    const overlay = document.getElementById("overlay");
+    const popups = ["popup1", "popup2", "popup3", "popup4"];
+    let currentPopup = 0;
 
-  <div id="smokeEffect">
-    <div class="smoke smoke1"></div>
-    <div class="smoke smoke2"></div>
-    <div class="smoke smoke3"></div>
-  </div>
-  <div id="sparkleContainer"></div>
-  <div id="balloonContainer"></div>
+    const interval = setInterval(() => {
+      countdown--;
+      countdownEl.textContent = countdown;
 
-  <button id="musicToggle">🔈 Play Music</button>
+      if (countdown <= 0) {
+        clearInterval(interval);
+        countdownEl.style.display = 'none';
+        document.getElementById("waitingText").style.display = 'none';
+        overlay.classList.add("show");
+        showPopup();
+      }
+    }, 1000);
 
-  <audio id="bgMusic" loop src="https://cdn.pixabay.com/download/audio/2021/10/28/audio_9a1b46b5e2.mp3?filename=happy-birthday-5673.mp3"></audio>
+    function showPopup() {
+      const popupId = popups[currentPopup];
+      const popupEl = document.getElementById(popupId);
+      popupEl.classList.add("show");
+
+      setTimeout(() => {
+        popupEl.classList.remove("show");
+        currentPopup++;
+        if (currentPopup < popups.length) {
+          showPopup();
+        } else {
+          overlay.classList.remove("show");
+        }
+      }, 3000);
+    }
+  </script></body>
+</html>
