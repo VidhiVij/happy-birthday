@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Pilot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Shadows Into Light', cursive;
+      background: radial-gradient(#ffe6f0, #fff0f5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    #countdown {
+      font-size: 60px;
+      color: #ff1493;
+      margin-bottom: 30px;
+      font-family: 'Pacifico', cursive;
+    }
+    .message {
+      display: none;
+      font-size: 26px;
+      margin: 20px;
+      max-width: 90%;
+      color: #c2185b;
+      background: linear-gradient(90deg, #fff 0%, #ffd5ec 50%, #fff 100%);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
+    }
+    .message.show {
+      display: block;
+      animation: fadeIn 2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: absolute;
+      background-color: red;
+      transform: rotate(-45deg);
+      animation: float 6s infinite ease-in;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      position: absolute;
+      background-color: red;
+      border-radius: 50%;
+    }
+    .heart:before { top: -50px; left: 0; }
+    .heart:after { left: 50px; top: 0; }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(-45deg); }
+      100% { transform: translateY(-800px) rotate(-45deg); }
+    }
+    img {
+      width: 140px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    .glitter {
+      background: repeating-linear-gradient(45deg, #ffe6f0, #fff0f5 10px, #ffd6ec 20px);
+      background-size: 400% 400%;
+      animation: sparkle 10s ease infinite;
+    }
+    @keyframes sparkle {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body class="glitter">
+
+<div id="countdown">10</div>
+
+<div class="message" id="m1">Happy Birthday Pilot!</div>
+<div class="message" id="m2">I know you don’t like your birthday, so I made a surprise...</div>
+<div class="message" id="m3">Wishing you joy, success & smiles, Ansh. <br>Also... maybe someone likes you secretly!</div>
+<div class="message" id="m4">
+  <img src="https://i.imgur.com/photo1.jpg" alt="photo1">
+  <img src="https://i.imgur.com/photo2.jpg" alt="photo2">
+  <img src="https://i.imgur.com/photo3.jpg" alt="photo3">
+  <img src="https://i.imgur.com/photo4.jpg" alt="photo4">
+  <img src="https://i.imgur.com/photo5.jpg" alt="photo5">
+  <p>Aap puchte the na ki screenshots le kar kya karungi? Yeh dekho... yeh karungi! <br> I hope aapko acha laga ho.</p>
+</div>
+
+<script>
+let countdown = 10;
+const countdownEl = document.getElementById("countdown");
+const messages = ["m1", "m2", "m3", "m4"];
+
+const heartGenerator = () => {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.style.left = Math.random() * 100 + 'vw';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+};
+
+let timer = setInterval(() => {
+  countdown--;
+  countdownEl.textContent = countdown;
+  if (countdown <= 0) {
+    clearInterval(timer);
+    countdownEl.style.display = "none";
+    showMessages();
+  }
+}, 1000);
+
+function showMessages() {
+  let index = 0;
+  const showNext = () => {
+    if (index < messages.length) {
+      document.getElementById(messages[index]).classList.add("show");
+      index++;
+      setTimeout(showNext, 5000);
+    }
+  };
+  showNext();
+  setInterval(heartGenerator, 600);
+}
+</script>
+
+</body>
+</html>
