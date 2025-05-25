@@ -1,134 +1,87 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Pilot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Ansh</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif;
-      font-weight: bold;
-      background: radial-gradient(ellipse at center, #000000 0%, #0a0a0a 100%);
-      color: white;
-      overflow: hidden;
-      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #111;
+      color: #fff;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
-    }
-    #countdown {
-      font-size: 70px;
-      color: #ff69b4;
+      height: 100vh;
       text-align: center;
-      text-shadow: 0 0 10px #ff69b4;
     }
-    #waitingText {
-      font-size: 24px;
-      color: #ddd;
-      margin-top: 10px;
-      text-shadow: 0 0 5px #ff69b4;
-    }
-    #overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.7);
-      z-index: 10;
+    .slide {
       display: none;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5rem;
+      padding: 20px;
     }
-    #overlay.show {
-      display: block;
+    .active {
+      display: flex;
     }
-    .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      max-width: 90vw;
-      max-height: 80vh;
-      background: linear-gradient(135deg, #ff69b4cc, #cc3399cc);
-      border-radius: 20px;
-      box-shadow: 0 0 20px #ff66cc, 0 0 40px #ff33aa, inset 0 0 20px #ff99cc;
-      padding: 30px 40px;
-      color: white;
-      font-size: 28px;
-      text-align: center;
-      transform: translate(-50%, -50%) translateY(50px);
-      opacity: 0;
-      pointer-events: none;
-      z-index: 11;
-      overflow-y: auto;
-      user-select: none;
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .popup.show {
-      opacity: 1;
-      transform: translate(-50%, -50%) translateY(0);
-      pointer-events: auto;
-    }
-    .popup img {
-      width: 150px;
-      margin: 20px auto 10px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #ff66cc, inset 0 0 10px #ff99cc;
-      display: block;
+    #timer {
+      font-size: 2rem;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div id="countdown">10</div>
-  <div id="waitingText">Waiting for the moment...</div>  <div id="overlay"></div>  <div id="popup1" class="popup">
-    Happy Birthday Pilot!
-    <img src="cake.jpeg" alt="cake" />
-  </div>
-  <div id="popup2" class="popup">I know you don’t like your birthday, so I made a surprise for you...</div>
-  <div id="popup3" class="popup">Wishing you joy, success & smiles, Ansh.<br>Also... maybe someone secretly likes you!</div>
-  <div id="popup4" class="popup">
-    <div>
-      <img src=pic1.jpeg" alt="pic1" />
-      <img src="pic2.jpeg" alt="pic2" />
-      <img src="pic3.jpeg" alt="pic3" />
-      <img src="pic4.jpeg" alt="pic4" />
-      <img src="pic5.jpeg" alt="pic5" />
+  <div id="slides">
+    <div class="slide active" id="slide1">
+      <div>Waiting for the special moment...</div>
+      <div id="timer">00:00:10</div>
     </div>
-    <p style="margin-top: 15px; font-size: 20px;">
-      Aap puchte the na ki screenshots le kar kya karungi? Yeh dekho... yeh karungi! <br/>
-      I hope aapko acha laga ho. I just tried to make your birthday a little worthy.
-    </p>
+    <div class="slide">It's finally 28 May, a very special day for me because the person who will gonna be the most amazing pilot was born on this day and my friend too 😏 guess who😅</div>
+    <div class="slide">Great guess🤭👀 it's you Ansh Randhawa ... finally it's your birthday 🎊🎊🎉🎉❤️🥳🥳</div>
+    <div class="slide">
+      <div>Happy Birthday Randhawa ji 🎂🎂😁</div>
+      <div id="msg2" style="margin-top: 20px; display: none;">
+        Hn hn I know aapko aapka birthday pasand nhi h aur aap apna phone bhi kr lete ho to socha ab aaise simple wish to krenge so I should give a little gift from my side ... so this is it 😁😁 ab jda thank you bolne mt lg jana I want to call you but thought ki agar aapne pick nhi kr to 🙃 so maine socha mujhe jo bolna h m iske through bol skti hu 😅😅 .. hope so aap pura isse dekhoge and hda boring nhi hoga yeh 🫠
+      </div>
+    </div>
+    <div class="slide">I want to tell you that I am so thank you ki cllg m myjhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂</div>
+    <div class="slide">Hope so aapka birthday isse thoda sa better ja rha ho maybe and want to tell you that I really like you the way you care about people ..✨️✨️🫶🫶🧿🧿 hayee nazar na lge aapko 😂😂🧿</div>
+    <div class="slide">Bs itna hi kr payi m hope fully aacha lga ho aapko and once again happy birthday Ansh 🎉🎉🎉🥳🥳😁😁</div>
   </div>  <script>
-    let countdown = 10;
-    const countdownEl = document.getElementById("countdown");
-    const overlay = document.getElementById("overlay");
-    const popups = ["popup1", "popup2", "popup3", "popup4"];
-    let currentPopup = 0;
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-    const interval = setInterval(() => {
-      countdown--;
-      countdownEl.textContent = countdown;
-
-      if (countdown <= 0) {
-        clearInterval(interval);
-        countdownEl.style.display = 'none';
-        document.getElementById("waitingText").style.display = 'none';
-        overlay.classList.add("show");
-        showPopup();
-      }
-    }, 1000);
-
-    function showPopup() {
-      const popupId = popups[currentPopup];
-      const popupEl = document.getElementById(popupId);
-      popupEl.classList.add("show");
-
-      setTimeout(() => {
-        popupEl.classList.remove("show");
-        currentPopup++;
-        if (currentPopup < popups.length) {
-          showPopup();
-        } else {
-          overlay.classList.remove("show");
+    function showNextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide++;
+      if (currentSlide < slides.length) {
+        slides[currentSlide].classList.add('active');
+        if (currentSlide === 3) {
+          setTimeout(() => document.getElementById('msg2').style.display = 'block', 3000);
         }
-      }, 3000);
+        setTimeout(showNextSlide, 3000);
+      }
     }
+
+    function startTimer() {
+      let totalSeconds = 10;
+      const timerEl = document.getElementById('timer');
+
+      const interval = setInterval(() => {
+        totalSeconds--;
+        const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+        const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+        const seconds = String(totalSeconds % 60).padStart(2, '0');
+        timerEl.textContent = `${hours}:${minutes}:${seconds}`;
+
+        if (totalSeconds <= 0) {
+          clearInterval(interval);
+          showNextSlide();
+        }
+      }, 1000);
+    }
+
+    startTimer();
   </script></body>
 </html>
