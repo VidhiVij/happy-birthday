@@ -42,43 +42,23 @@
 }
 .cake {
   font-family: 'Pacifico', cursive;
-  font-size: 2rem;
+  font-size: 4rem;
   margin: 20px 0;
 }
 .emoji {
   font-size: 2rem;
 }
-.img-box {
-  width: 200px;
-  height: auto;
-  margin-bottom: 20px;
-}
-.img-box img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-.balloon {
+.star {
   position: absolute;
-  width: 30px;
-  height: 50px;
-  background: radial-gradient(circle at 30% 30%, #ff69b4, #c71585);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  animation: float 5s ease-in-out infinite;
-}
-.balloon:after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  width: 2px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
   background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
 }
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
@@ -90,47 +70,33 @@
 <body>
   <div id="slides">
     <div class="slide active" id="slide1">
-      <div class="img-box"><img src="https://cdn.pixabay.com/photo/2016/03/31/20/11/birthday-cake-1293050_1280.png" alt="Birthday Cake"></div>
+      <div class="cake">🎂</div>
       <div>Waiting for the special moment...</div>
       <div id="timer">00:00:10</div>
-      <div class="balloon" style="left: 20px; top: 30px;"></div>
-      <div class="balloon" style="left: 80%; top: 50px;"></div>
     </div>
     <div class="slide">
       It's finally 28 May, a very special day for me because the person who will gonna be the most amazing pilot was born on this day and my friend too 😏 guess who😅
-      <div class="balloon" style="left: 30px; top: 60px;"></div>
-      <div class="balloon" style="left: 85%; top: 20px;"></div>
     </div>
     <div class="slide">
       Great guess🤭👀 it's you Ansh Randhawa ... finally it's your birthday 🎊🎊🎉🎉❤️🥳🥳
-      <div class="balloon" style="left: 40px; top: 30px;"></div>
-      <div class="balloon" style="left: 70%; top: 40px;"></div>
     </div>
     <div class="slide">
       <div class="cake">Happy Birthday Randhawa ji 🎂🎂😁</div>
       <div id="msg2" style="margin-top: 20px; display: none;">
         Hn hn I know aapko aapka birthday pasand nhi h aur aap apna phone bhi kr lete ho to socha ab aaise simple wish to krenge so I should give a little gift from my side ... so this is it 😁😁 ab jda thank you bolne mt lg jana I want to call you but thought ki agar aapne pick nhi kr to 🙃 so maine socha mujhe jo bolna h m iske through bol skti hu 😅😅 .. hope so aap pura isse dekhoge and hda boring nhi hoga yeh 🫠
       </div>
-      <div class="balloon" style="left: 20px; top: 80px;"></div>
-      <div class="balloon" style="left: 75%; top: 10px;"></div>
     </div>
     <div class="slide">
       I want to tell you that I am so thank you ki cllg m myjhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂
-      <div class="balloon" style="left: 15px; top: 50px;"></div>
-      <div class="balloon" style="left: 60%; top: 40px;"></div>
     </div>
     <div class="slide">
       Hope so aapka birthday isse thoda sa better ja rha ho maybe and want to tell you that I really like you the way you care about people ..✨️✨️🫶🫶🧿🧿 hayee nazar na lge aapko 😂😂🧿
-      <div class="balloon" style="left: 10px; top: 30px;"></div>
-      <div class="balloon" style="left: 85%; top: 70px;"></div>
     </div>
     <div class="slide">
-      <div class="img-box"><img src="https://cdn.pixabay.com/photo/2020/08/25/16/19/teddy-bear-5517515_1280.png" alt="Teddy Bear"></div>
+      <div class="cake">🎂</div>
       Bs itna hi kr payi m hope fully aacha lga ho aapko and once again happy birthday Ansh 🎉🎉🎉🥳🥳😁😁<br><br>
       <div class="emoji">🎂✈️🎁</div>
       <div>Thank you for being the amazing person you are!</div>
-      <div class="balloon" style="left: 20px; top: 60px;"></div>
-      <div class="balloon" style="left: 80%; top: 10px;"></div>
     </div>
   </div>  <script>
     const slides = document.querySelectorAll('.slide');
@@ -166,6 +132,19 @@
       }, 1000);
     }
 
+    // Create twinkling stars
+    const createStars = () => {
+      for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        document.body.appendChild(star);
+      }
+    }
+
+    createStars();
     startTimer();
   </script></body>
 </html>
