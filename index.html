@@ -25,10 +25,10 @@
   padding: 20px;
   width: 90vw;
   height: 90vh;
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid #00f0ff;
-  border-radius: 20px;
-  box-shadow: 0 0 25px #00f0ff;
+  background: linear-gradient(145deg, #ffe4f0, #e0f7ff);
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+  color: #333;
   animation: fadeIn 1s ease-in-out;
 }
 .active {
@@ -37,7 +37,7 @@
 #timer {
   font-size: 2rem;
   margin-top: 10px;
-  color: #00f0ff;
+  color: #0051a2;
 }
 .cake {
   font-family: 'Pacifico', cursive;
@@ -46,6 +46,16 @@
 }
 .emoji {
   font-size: 2rem;
+}
+.img-box {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.img-box img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
@@ -57,6 +67,7 @@
 <body>
   <div id="slides">
     <div class="slide active" id="slide1">
+      <div class="img-box"><img src="https://cdn.pixabay.com/photo/2020/08/25/16/19/teddy-bear-5517515_1280.png" alt="Teddy Bear Holding Cake"></div>
       <div>Waiting for the special moment...</div>
       <div id="timer">00:00:10</div>
     </div>
@@ -71,6 +82,7 @@
     <div class="slide">I want to tell you that I am so thank you ki cllg m myjhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂</div>
     <div class="slide">Hope so aapka birthday isse thoda sa better ja rha ho maybe and want to tell you that I really like you the way you care about people ..✨️✨️🫶🫶🧿🧿 hayee nazar na lge aapko 😂😂🧿</div>
     <div class="slide">
+      <div class="img-box"><img src="https://cdn.pixabay.com/photo/2021/10/29/13/06/birthday-6751833_1280.png" alt="Cute Birthday Cake"></div>
       Bs itna hi kr payi m hope fully aacha lga ho aapko and once again happy birthday Ansh 🎉🎉🎉🥳🥳😁😁<br><br>
       <div class="emoji">🎂✈️🎁</div>
       <div>Thank you for being the amazing person you are!</div>
