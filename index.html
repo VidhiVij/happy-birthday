@@ -4,44 +4,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Ansh</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to top, #d0eaff, #ffffff);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      overflow: hidden;
-    }
-    .slide {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      padding: 20px;
-      width: 90vw;
-      height: 90vh;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 1s ease-in-out;
-    }
-    .active {
-      display: flex;
-    }
-    #timer {
-      font-size: 2rem;
-      margin-top: 10px;
-      color: #0051a2;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #001f3f, #000);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 20px;
+  width: 90vw;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00f0ff;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #00f0ff;
+  animation: fadeIn 1s ease-in-out;
+}
+.active {
+  display: flex;
+}
+#timer {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #00f0ff;
+}
+.cake {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+.emoji {
+  font-size: 2rem;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
   </style>
 </head>
 <body>
@@ -53,14 +63,18 @@
     <div class="slide">It's finally 28 May, a very special day for me because the person who will gonna be the most amazing pilot was born on this day and my friend too 😏 guess who😅</div>
     <div class="slide">Great guess🤭👀 it's you Ansh Randhawa ... finally it's your birthday 🎊🎊🎉🎉❤️🥳🥳</div>
     <div class="slide">
-      <div>Happy Birthday Randhawa ji 🎂🎂😁</div>
+      <div class="cake">Happy Birthday Randhawa ji 🎂🎂😁</div>
       <div id="msg2" style="margin-top: 20px; display: none;">
         Hn hn I know aapko aapka birthday pasand nhi h aur aap apna phone bhi kr lete ho to socha ab aaise simple wish to krenge so I should give a little gift from my side ... so this is it 😁😁 ab jda thank you bolne mt lg jana I want to call you but thought ki agar aapne pick nhi kr to 🙃 so maine socha mujhe jo bolna h m iske through bol skti hu 😅😅 .. hope so aap pura isse dekhoge and hda boring nhi hoga yeh 🫠
       </div>
     </div>
     <div class="slide">I want to tell you that I am so thank you ki cllg m myjhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂</div>
     <div class="slide">Hope so aapka birthday isse thoda sa better ja rha ho maybe and want to tell you that I really like you the way you care about people ..✨️✨️🫶🫶🧿🧿 hayee nazar na lge aapko 😂😂🧿</div>
-    <div class="slide">Bs itna hi kr payi m hope fully aacha lga ho aapko and once again happy birthday Ansh 🎉🎉🎉🥳🥳😁😁<br><br>Thank you for being the amazing person you are!</div>
+    <div class="slide">
+      Bs itna hi kr payi m hope fully aacha lga ho aapko and once again happy birthday Ansh 🎉🎉🎉🥳🥳😁😁<br><br>
+      <div class="emoji">🎂✈️🎁</div>
+      <div>Thank you for being the amazing person you are!</div>
+    </div>
   </div>  <script>
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
