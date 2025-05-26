@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Ansh</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
@@ -45,7 +45,7 @@
     }
     .cake {
       font-family: 'Pacifico', cursive;
-      font-size: 6rem;
+      font-size: 4rem;
       margin: 20px 0;
     }
     .emoji {
@@ -85,46 +85,44 @@
     <div class="slide">
       <div class="cake">Happy Birthday Randhawa ji 🎂🎂😁</div>
       <div id="msg2" style="margin-top: 20px; display: none;">
-        Socha simple wish krne se kuch extra hi kr diya jaye... bas ek chhoti si effort hai from my side<br><br>
-        Tum zyada phone use nahi krte isliye socha yehi best tareeka hoga tumhe wish karne ka. Hope you like it thoda sa bhi.
+        Hn hn I know aapko aapka birthday pasand nhi h aur aap apna phone bhi kr lete ho to socha ab aaise simple wish to krenge so I should give a little gift from my side ... so this is it 😁😁 ab jda thank you bolne mt lg jana I want to call you but thought ki agar aapne pick nhi kr to 🙃 so maine socha mujhe jo bolna h m iske through bol skti hu 😅😅 .. hope so aap pura isse dekhoge and hda boring nhi hoga yeh 🫠
       </div>
     </div>
     <div class="slide">
-      I’m really grateful ki mujhe college mein tum jaisa dost mila. Kabhi kabhi lagta hai tum waise insaan ho jinke saath har moment thoda special lagta hai.
+      I want to tell you that I am so thank you ki cllg m myjhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂
     </div>
     <div class="slide">
-      Tumhari chhoti chhoti baatein, care karna bina dikhaye, aur hamesha thoughtful rehna — wo sab cheezein kabhi kabhi dil ko secretly khush kar deti hain.
+      Hope so aapka birthday isse thoda sa better ja rha ho maybe and want to tell you that I really like you the way you care about people ..✨️✨️🫶🫶🧿🧿 hayee nazar na lge aapko 😂😂🧿
+    </div>
+    <div class="slide">
+      You know… some people just have that little extra sparkle in them<br>
+      The kind that makes others smile without even realizing why.
     </div>
     <div class="slide">
       <div class="cake">🎂</div>
-      Hope you didn’t find it childish<br><br>
-      Bas itna hi kr payi main... par dil se kiya. Once again, happy birthday Ansh!<br><br>
+      Hope so you don't find it childish 🐱<br><br>
+      Bs itna hi kr payi m hope fully aacha lga ho aapko and once again happy birthday Ansh 🎉🎉🎉🥳🥳😁😁<br><br>
       <div class="emoji">🎂✈️🎁</div>
     </div>
     <div class="slide">
-      That’s it... bas ek chhoti si feeling thi jo share karni thi<br><br>
-      Aaj tumhara din hai — smile karte rehna, khush rehna... aur agar thoda sa bhi achha laga ho to bs ek chhoti si smile hi kaafi hai
+      Thank you for being the amazing person<br><br>
+      Hopefully you like this — if you like this a little bit and if you want you can call me 😅😅👀
     </div>
   </div>
 
   <script>
     const slides = document.querySelectorAll('.slide');
+    const delays = [10000, 6000, 3000, 6000, 6000, 6000, 3000, 6000, 4000];
     let currentSlide = 0;
-
-    const delays = [10000, 6000, 3000, 6000, 6000, 6000, 6000, 5000]; // per slide delay in ms
 
     function showNextSlide() {
       slides[currentSlide].classList.remove('active');
       currentSlide++;
       if (currentSlide < slides.length) {
         slides[currentSlide].classList.add('active');
-
         if (currentSlide === 3) {
-          setTimeout(() => {
-            document.getElementById('msg2').style.display = 'block';
-          }, 3000);
+          setTimeout(() => document.getElementById('msg2').style.display = 'block', 3000);
         }
-
         setTimeout(showNextSlide, delays[currentSlide]);
       }
     }
@@ -147,7 +145,7 @@
       }, 1000);
     }
 
-    function createStars() {
+    const createStars = () => {
       for (let i = 0; i < 100; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
