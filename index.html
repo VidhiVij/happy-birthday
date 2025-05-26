@@ -1,93 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Ansh!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Ansh</title>
   <style>
-    body {
-      background-color: #fef6e4;
-      font-family: 'Arial', sans-serif;
-      color: #001858;
-      padding: 20px;
-      text-align: center;
-      animation: fadeIn 2s ease-in;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #001f3f, #000);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 20px;
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 30px;
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.7);
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+.active {
+  display: flex;
+}
+#timer {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #00bfff;
+}
+.cake {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  margin: 20px 0;
+}
+.emoji {
+  font-size: 2rem;
+}
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 1.2s infinite ease-in-out;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      animation: slideUp 1.5s ease-out;
-    }
-
-    h1 {
-      color: #f582ae;
-      animation: popIn 1.2s ease;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .heart {
-      color: #f582ae;
-      font-size: 2rem;
-      display: inline-block;
-      animation: floatHeart 2s infinite ease-in-out;
-      margin-top: 10px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes popIn {
-      0% { transform: scale(0.7); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes floatHeart {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    @media screen and (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Happy Birthday, Ansh!</h1>
-    <p>
-      Hi Ansh, first of all — Happy Birthday!<br/><br/>
-      I don't know where to begin, but I'll try. You're one of the best people I’ve met. You're kind, cool, smart, talented, and always smiling. Mujhe lagta hai aapko jitna janta hoon, utna hi respect karta hoon.<br/><br/>
-      Aap jab bhi smile karte ho, sab kuch theek lagta hai. Chahe kitna bhi bura din ho, aapki presence se sab theek ho jaata hai. Main genuinely bol raha hoon, aapka nature itna acha hai ki har koi aapko pasand kare.<br/><br/>
-      Aapka aviation ke liye passion dekh ke lagta hai ki aap ek din definitely pilot banoge. Kabhi kabhi sochta hoon, kitna acha hota agar hum zyada time saath bitate, lekin jo hai uske liye bhi grateful hoon.<br/><br/>
-      Ye page sirf isliye banaya kyunki mujhe laga ki aap deserve karte ho kuch special. Isme kuch zyada nahi hai, lekin dil se hai. Aap jaise ho, waise hi perfect ho. Stay the same!<br/><br/>
-      Once again, Happy Birthday! Enjoy your day to the fullest!<br/><br/>
-      <span class="heart">With lots of respect and admiration — Vidhivij</span>
-    </p>
-  </div>
-</body>
+  <div id="slides">
+    <div class="slide active" id="slide1">
+      <div class="cake">🎂</div>
+      <div>Waiting for the special moment...</div>
+      <div id="timer">00:00:10</div>
+    </div>
+    <div class="slide">
+      It's finally 28 May, a very special day for me because the person who will gonna be the most amazing pilot was born on this day and my friend too 😏 guess who😅
+    </div>
+    <div class="slide">
+      Great guess🤭👀 it's you Ansh Randhawa ... finally it's your birthday 🎊🎊🎉🎉❤️🥳🥳
+    </div>
+    <div class="slide">
+      <div class="cake">Happy Birthday Randhawa ji 🎂🎂😁</div>
+      <div id="msg2" style="margin-top: 20px; display: none;">
+        Hn hn I know aapko aapka birthday pasand nhi h aur aap apna phone bhi kr lete ho to socha ab aaise simple wish to krenge so I should give a little gift from my side ... so this is it 😁😁 ab jda thank you bolne mt lg jana I want to call you but thought ki agar aapne pick nhi kr to 🙃 so maine socha mujhe jo bolna h m iske through bol skti hu 😅😅 .. hope so aap pura isse dekhoge and hda boring nhi hoga yeh 🫠
+      </div>
+    </div>
+    <div class="slide">
+      I want to tell you that I am so thank you ki cllg m myjhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂
+    </div>
+    <div class="slide">
+      Hope so aapka birthday isse thoda sa better ja rha ho maybe and want to tell you that I really like you the way you care about people ..✨️✨️🫶🫶🧿🧿 hayee nazar na lge aapko 😂😂🧿
+    </div>
+    <div class="slide">
+      <div class="cake">🎂</div>
+      Hope so you don't find it childish 🐱<br><br>
+      Bs itna hi kr payi m hope fully aacha lga ho aapko and once again happy birthday Ansh 🎉🎉🎉🥳🥳😁😁<br><br>
+      <div class="emoji">🎂✈️🎁</div>
+    </div>
+    <div class="slide">
+      Thank you for being the amazing person<br><br>
+      Hopefully you like this — if you like this a little bit and if you want you can call me 😅😅👀
+    </div>
+  </div>  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide++;
+      if (currentSlide < slides.length) {
+        slides[currentSlide].classList.add('active');
+        if (currentSlide === 3) {
+          setTimeout(() => document.getElementById('msg2').style.display = 'block', 3000);
+        }
+        setTimeout(showNextSlide, 3000);
+      }
+    }
+
+    function startTimer() {
+      let totalSeconds = 10;
+      const timerEl = document.getElementById('timer');
+
+      const interval = setInterval(() => {
+        totalSeconds--;
+        const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+        const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+        const seconds = String(totalSeconds % 60).padStart(2, '0');
+        timerEl.textContent = `${hours}:${minutes}:${seconds}`;
+
+        if (totalSeconds <= 0) {
+          clearInterval(interval);
+          showNextSlide();
+        }
+      }, 1000);
+    }
+
+    // Create twinkling stars
+    const createStars = () => {
+      for (let i = 0; i < 100; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.animationDuration = (Math.random() * 1.5 + 0.8) + 's';
+        document.body.appendChild(star);
+      }
+    }
+
+    createStars();
+    startTimer();
+  </script></body>
 </html>
