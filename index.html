@@ -73,11 +73,12 @@
   <script>
   const password = prompt("Enter the secret code:");
   if (password !== "anshbday2025") {
-    document.write("<h2 style='color:white; text-align:center;'>Wrong password.</h2>");
-    throw new Error("Access denied.");
+    document.body.innerHTML = ""; // Clear all content
+    document.body.style.background = "white"; // Set white background
+    throw new Error("Access denied."); // Stop further JS execution
   }
 </script>
-
+  
   <div id="slides">
     <div class="slide active" id="slide1">
       <div class="cake">🎂</div>
