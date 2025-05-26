@@ -89,7 +89,7 @@
       </div>
     </div>
     <div class="slide">
-      I want to tell you that I am so thank you ki cllg m myjhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂
+      I want to tell you that I am so thank you ki cllg m mujhe aap jaisa dost mila warna pta h maine socha tha cllg life m koi dost hi nhi hoga aur aap kadfi aache ho I think so😂😂😅 naah really aap aache ho atleast mere liye to so wishing you a very happy birthday Pilot 👨‍✈️🎂 🥳 🎉 😁 ... have a good day and wishing for your early success jisse hum ghumne ja sake 😂😂😂
     </div>
     <div class="slide">
       Hope so aapka birthday isse thoda sa better jaye and want to tell you that I really like you the way you care about people ..✨️✨️🫶🫶🧿🧿 hayee nazar na lge aapko 😂😂🧿
@@ -107,13 +107,14 @@
     <div class="slide">
       Thank you for being the amazing person<br><br>
       and thinking ki aap isse pura dekhoge ... hn thoda bring ho skta h but 20-25 sec ki h 😅😅👀
-      Again wishing a very happy birthday Mr,🎊🎊❤️
+      Again wishing a very happy birthday Mr.🎊🎊❤️
     </div>
   </div>
 
   <script>
     const slides = document.querySelectorAll('.slide');
-    const delays = [10000, 6000, 3000, 6000, 6000, 6000, 3000, 6000, 4000];
+    const delays = [10000, 6000, 3000, 12000, 10000, 6000, 3000, 6000, 4000]; // Adjusted delays
+
     let currentSlide = 0;
 
     function showNextSlide() {
@@ -122,7 +123,7 @@
       if (currentSlide < slides.length) {
         slides[currentSlide].classList.add('active');
         if (currentSlide === 3) {
-          setTimeout(() => document.getElementById('msg2').style.display = 'block', 3000);
+          setTimeout(() => document.getElementById('msg2').style.display = 'block', 5000);
         }
         setTimeout(showNextSlide, delays[currentSlide]);
       }
