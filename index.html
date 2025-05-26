@@ -73,9 +73,8 @@
   <script>
   const password = prompt("Enter the secret code:");
   if (password !== "anshbday2025") {
-    document.body.innerHTML = ""; // Clear all content
-    document.body.style.background = "white"; // Set white background
-    throw new Error("Access denied."); // Stop further JS execution
+    document.write(""); // Clears the screen
+    window.stop(); // Stops loading any further content
   }
 </script>
   
