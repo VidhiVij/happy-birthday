@@ -71,12 +71,12 @@
 </head>
 <body>
   <script>
-    const password = prompt("Enter the secret code:");
-    if (password !== "anshbday2025") {
-      document.body.innerHTML = "<h2 style='color:white; text-align:center;'>Wrong password.</h2>";
-      throw new Error("Wrong password");
-    }
-  </script>
+  const password = prompt("Enter the secret code:");
+  if (password !== "anshbday2025") {
+    document.write("<h2 style='color:white; text-align:center;'>Wrong password.</h2>");
+    throw new Error("Access denied.");
+  }
+</script>
 
   <div id="slides">
     <div class="slide active" id="slide1">
